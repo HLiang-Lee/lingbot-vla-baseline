@@ -1,0 +1,5 @@
+{
+  "sampling": "frame",
+  "augment": false,
+  "backbone_lr_scale": 1
+}
