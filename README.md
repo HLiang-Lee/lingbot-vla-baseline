@@ -8,8 +8,10 @@
 
 | 模型 | 协议 | 成功 |
 |---|---|---:|
-| 基础 LingBot 发布权重 [model_link](https://huggingface.co/robbyant/lingbot-vla-v2-6b-robotwin) | 50 任务 × 100 回合 | 3813/5000（76.26%） |
+| LingBot 发布后训练权重 [model_link](https://huggingface.co/robbyant/lingbot-vla-v2-6b-robotwin) | 50 任务 × 100 回合 | 3813/5000（76.26%） |
 | 原始预训练权重继续训练到 5000 步 | 50 任务 × 10 回合 | 269/500（53.80%） |
+
+※ 与官方结果存在差别的原因：该代码训练使用的是clean数据计算的边界和lingbot-vla-v2-6b-robotwin这个后训练边界权重不一致，测评使用的是clean边界数据，映射存在误差。
 
 基础 LingBot 指已完整评测的发布权重。训练起点是原始预训练权重，不是这份发布权重。原始预训练权重的全量评测没有跑完，这里不记它的分数。5000 步结果来自 clean 示范、帧均匀采样、Muon、学习率 1e-4、seed 42、3 卡、micro-batch 8、global batch 120。
 
